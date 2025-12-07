@@ -15,29 +15,32 @@ int main() {
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    for (int i = 1; i <= bispo_movimentos; i++) {
-        printf("Cima");
-        if (i == 1) 
-        printf(" e Direita (%d casa)\n", i);
-        else
-        printf(" e Direita (%d casas)\n", i);
-    }
+    printf("\nMovimentação do Bispo:\n");
+        for (int i = 1; i <= bispo_movimentos; i++) {
+            printf("Cima");
+            if (i == 1) 
+            printf(" e Direita (%d casa)\n", i);
+            else
+            printf(" e Direita (%d casas)\n", i);
+        }
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-    int j = 1;
-    while (torre_movimentos > 0) {
-        j == 1 ? printf("Direita (%d casa.\n", j); : printf("Direita (%d casas.\n", j);
+    printf("\nMovimentação da Torre:\n");
+        char j = 1;
+        while (torre_movimentos > 0) {
+        printf("Direita (%d casa%s\n", j, (j == 1? " ": "s"));
         j++;
         torre_movimentos--;
-    }
+        }
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    int k = 1;
-    do {
-        k == 1 ? printf("Esquerda (%d casa.\n", k); : printf("Esquerda (%d casas.\n", k);
-        k++;
-        rainha_movimentos--;
-    } while (rainha_movimentos > 0);
+    printf("\nMovimentação da Rainha:\n");
+        int k = 1;
+        do {
+        printf("Esquerda (%d casa%s\n", k, k == 1? " ": "s");
+            k++;
+            rainha_movimentos--;
+        } while (rainha_movimentos > 0);
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
