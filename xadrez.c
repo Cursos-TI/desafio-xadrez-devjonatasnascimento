@@ -16,17 +16,18 @@ void mover_bispo(int casas){
     }
 }
 void mover_torre(int casas){
-    while (casas > 0)
+    if (casas > 0)
     {
         printf("Direita\n");
-        casas--;
+        mover_torre(casas - 1);
     }
 }
 void mover_rainha(int casas){
-    do {
+    if (casas > 0)
+    {
         printf("Esquerda\n");
-        casas--;
-    } while (casas > 0);
+        mover_rainha(casas - 1);
+    }
 }
 int main() {
     // Nível Mestre - Movimentação das Peças
